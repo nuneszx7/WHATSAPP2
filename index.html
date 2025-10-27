@@ -1,43 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png?20220228223904"> -->
-     <link rel="shortcut icon" href="./img/WhatsApp2.png">
-    <title>WhatsApp 2</title>
+    <link rel="shortcut icon" href="./img/WhatsApp2.png">
+
 </head>
 <body>
-    
-    <div class="background-top"></div>
-    <div class="whatsapp-container">
+    <div class="fundo-verde-topo"></div> 
 
-        <div class="painel-esquerda">
-            <header class="barra-lateral">
-                <div class="foto-usuario">
-                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Foto de perfil" class="avatar">
-                </div>
+    <div class="app-container">
+        
+        <div class="painel-esquerdo">
+            
+            <header class="cabecalho-lateral">
+                <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Meu Perfil" class="avatar">
                 <div class="icones">
-                    <i class="usuarios"></i>
-                    <i class="contorno"></i>
-
-
-
-
+                    <i class="fas fa-comment-dots"></i>
+                    <i class="fas fa-ellipsis-v"></i>
                 </div>
             </header>
+
+            <div class="barra-pesquisa">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+
+            <div class="lista-conversas">
+                <div class="item-conversa ativo">
+                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato 1" class="avatar">
+                    <div class="info-chat">
+                        <span class="nome-contato">Cristiano Ronaldo</span>
+                        <p class="ultima-mensagem">SIUUUUUU</p>
+                    </div>
+                    <span class="hora-chat">10:45</span>
+                </div>
+                
+                <div class="item-conversa">
+                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato 2" class="avatar">
+                    <div class="info-chat">
+                        <span class="nome-contato">Grupo</span>
+                        <p class="ultima-mensagem">Mãe: Bom dia</p>
+                    </div>
+                    <span class="hora-chat">7:21</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="painel-direito">
+            
+            <header class="cabecalho-chat">
+                <div class="info-contato-chat">
+                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato Exemplo" class="avatar">
+                    <span class="nome-contato">Cristiano Ronaldo</span>
+                </div>
+                <div class="icones">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </header>
+
+            <div class="area-mensagens">
+                <div class="mensagem recebida">
+                    SIUUUUUU
+                    <span class="hora-mensagem">10:40</span>
+                </div>
+                <div class="mensagem enviada">
+                    É isso!!
+                    <span class="hora-mensagem">10:45</span>
+                </div>
+            </div>
+
+            <footer class="rodape-chat">
+                <i class="far fa-smile"></i>
+                <input type="text" placeholder="Digite uma mensagem" class="campo-input">
+                <i class="fas fa-microphone"></i>
+            </footer>
         </div>
 
     </div>
-            
-            
-
-
-
-        </div>
-    </div>
-
-
 </body>
 </html>
