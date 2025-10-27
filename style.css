@@ -1,0 +1,290 @@
+:root {
+    --cor-verde-principal: #008069;
+    --cor-fundo-app: #000000;
+    --cor-fundo-painel-esquerdo: #FFFFFF;
+    --cor-fundo-cabecalho: #434343;
+    --cor-borda-cinza: #E9EDEF;
+    --cor-texto-principal: #111B21;
+    --cor-texto-secundario: #667781;
+    --cor-bolha-enviada: #D9FDD3;
+    --cor-bolha-recebida: #FFFFFF;
+    --cor-tick-azul: #15b9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo-app);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.fundo-verde-topo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #bfac00;
+    z-index: 1;
+}
+
+/* tela principal */
+.app-container {
+    width: 90%;
+    max-width: 1400px;
+    height: 95vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.painel-esquerdo {
+    width: 35%;
+    min-width: 300px;
+    background-color: var(--cor-fundo-painel-esquerdo);
+    border-right: 1px solid var(--cor-borda-cinza);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-lateral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    height: 59px;
+    background-color: var(--cor-fundo-cabecalho);
+}
+
+.cabecalho-lateral span {
+    color: #e7df00;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icones i {
+    color: var(--cor-texto-secundario);
+    font-size: 1.2rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #F6F6F6;
+}
+
+.barra-pesquisa input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.barra-pesquisa i {
+    color: var(--cor-texto-secundario);
+    margin-left: 8px;
+    font-size: 0.9rem;
+}
+
+.lista-conversas {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.item-conversa {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--cor-borda-cinza);
+    cursor: pointer;
+}
+
+.item-conversa:hover {
+    background-color: #F5F5F5;
+}
+
+.item-conversa.ativo {
+    background-color: #E9EAEF;
+}
+
+.info-chat {
+    flex-grow: 1;
+    margin-left: 12px;
+    overflow: hidden;
+}
+
+.nome-contato {
+    font-weight: 500;
+    color: #FFFFFF;
+    display: block;
+}
+
+.painel-esquerdo .nome-contato {
+    color: var(--cor-texto-principal); /* Cor escura para contrastar com o fundo branco */
+}
+
+.ultima-mensagem {
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hora-chat {
+    font-size: 0.75rem;
+    color: var(--cor-texto-secundario);
+}
+
+.notificacao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.contador-msgs {
+    background-color: #e7df00;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalhes-contato {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.status-contato {
+    font-size: 0.8rem;
+    color: #797979;
+}
+
+.painel-direito {
+    flex-grow: 1;
+    background-color: var(--cor-fundo-app);
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    height: 59px;
+    background-color: var(--cor-fundo-cabecalho);
+}
+
+/* nao consegui fazer o que queria, então desativei essa linha */
+/* .cabecalho-chat p{
+    font-size: 50%;
+    padding: 10px 16px;
+    margin-top: 25px;
+    margin-right: 10px;
+} */
+
+.info-contato-chat {
+    display: flex;
+    align-items: center;
+}
+
+.area-mensagens {
+    flex-grow: 1;
+    padding: 20px 50px;
+    overflow-y: auto;
+    /* papel de parede da conversa (opcional) */
+    /* background-image: url('../imagem-desejada'); */
+}
+
+.mensagem {
+    max-width: 60%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+    width: -moz-fit-content; 
+    width: fit-content;
+}
+
+.hora-mensagem {
+    font-size: 0.65rem;
+    color: rgba(0, 0, 0, 0.45);
+    margin-left: 10px;
+    float: right;
+    line-height: 1.8;
+}
+
+.status-mensagem-visualizado {
+    color: var(--cor-tick-azul);
+    font-size: 0.5rem;
+    margin-left: 4px;
+}
+
+.recebida {
+    background-color: var(--cor-bolha-recebida);
+    border-top-left-radius: 0;
+    margin-right: auto;
+}
+
+.enviada {
+    background-color: var(--cor-bolha-enviada);
+    border-top-right-radius: 0;
+    margin-left: auto;
+}
+
+
+.rodape-chat {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    height: 62px;
+    background-color: var(--cor-fundo-cabecalho);
+}
+
+.rodape-chat i {
+    color: var(--cor-texto-secundario);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.campo-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}

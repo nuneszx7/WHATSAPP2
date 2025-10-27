@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png?20220228223904"> -->
     <link rel="shortcut icon" href="./img/WhatsApp2.png">
+    <script src=".\whatsApp.js" type="module" defer></script>
+    
 
 </head>
 <body>
@@ -18,7 +20,8 @@
         <div class="painel-esquerdo">
             
             <header class="cabecalho-lateral">
-                <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Meu Perfil" class="avatar">
+                <!-- <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-20tehfawxt5eihco.jpg" alt="Meu Perfil" class="avatar"> -->
+                <span>WhatsApp 2</span>
                 <div class="icones">
                     <i class="fas fa-comment-dots"></i>
                     <i class="fas fa-ellipsis-v"></i>
@@ -31,8 +34,17 @@
             </div>
 
             <div class="lista-conversas">
+                <div class="item-conversa">
+                    <img src="./img/maria.png" alt="Contato 4" class="avatar">
+                    <div class="info-chat">
+                        <span class="nome-contato">Maria</span>
+                        <p class="ultima-mensagem">KKKKKKKKKKKKKKKK que daora</p>
+                    </div>
+                    <div class="notificacao"><span class="hora-chat">11:30</span><span class="contador-msgs">2</span></div>
+                </div>
+
                 <div class="item-conversa ativo">
-                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato 1" class="avatar">
+                    <img src="./img/cerrote.jfif" alt="Contato 1" class="avatar">
                     <div class="info-chat">
                         <span class="nome-contato">Cristiano Ronaldo</span>
                         <p class="ultima-mensagem">SIUUUUUU</p>
@@ -41,12 +53,21 @@
                 </div>
                 
                 <div class="item-conversa">
-                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato 2" class="avatar">
+                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-20tehfawxt5eihco.jpg" alt="Contato 2" class="avatar">
                     <div class="info-chat">
                         <span class="nome-contato">Grupo</span>
                         <p class="ultima-mensagem">Mãe: Bom dia</p>
                     </div>
                     <span class="hora-chat">7:21</span>
+                </div>
+
+                <div class="item-conversa">
+                    <img src="./img/trabalho.jpg" alt="Contato 3" class="avatar">
+                    <div class="info-chat">
+                        <span class="nome-contato">Trabalho</span>
+                        <p class="ultima-mensagem">Você: Ok, amanhã eu vejo isso.</p>
+                    </div>
+                    <span class="hora-chat">Ontem</span>
                 </div>
             </div>
         </div>
@@ -55,8 +76,11 @@
             
             <header class="cabecalho-chat">
                 <div class="info-contato-chat">
-                    <img src="https://wallpapers.com/images/hd/placeholder-profile-icon-8qmjk1094ijhbem9.jpg" alt="Contato Exemplo" class="avatar">
-                    <span class="nome-contato">Cristiano Ronaldo</span>
+                    <img src="./img/cerrote.jfif" alt="Contato Exemplo" class="avatar">
+                    <div class="detalhes-contato">
+                        <span class="nome-contato">Cristiano Ronaldo</span>
+                        <span class="status-contato">online</span>
+                    </div>
                 </div>
                 <div class="icones">
                     <i class="fas fa-search"></i>
@@ -71,12 +95,14 @@
                 </div>
                 <div class="mensagem enviada">
                     É isso!!
+                    <i class="fas fa-check-double status-mensagem-visualizado"></i>
                     <span class="hora-mensagem">10:45</span>
                 </div>
             </div>
 
             <footer class="rodape-chat">
                 <i class="far fa-smile"></i>
+                <i class="fas fa-paperclip"></i>
                 <input type="text" placeholder="Digite uma mensagem" class="campo-input">
                 <i class="fas fa-microphone"></i>
             </footer>
